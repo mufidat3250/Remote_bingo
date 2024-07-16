@@ -43,7 +43,7 @@
 {
     "message": "string",
     "success": true,
-    "statusCode": integer
+    "statusCode": Int
 }
 ```
 
@@ -52,7 +52,7 @@
 {
     "message": "string",
     "success": false,
-     "statusCode": integer
+     "statusCode": Int
 }
 ```
 
