@@ -2,16 +2,13 @@
 
 ## Description
 
-- A potential user sends requests with information(email).
-- The user email is validated and sanitized and is securely stored in the database.
-- If the user email fails the validation, an error message is sent to them.
-- On successful validation, a confirmation email is sent to the user's email securely.
+*If a user wants a copy of the boilerplate, the person would input a valid email address into the form and press the button to submit. The email will get validated and sanitized. If the email fails the validation an error message would be returned. If successful, the email will be added to the squeeze_table and a successful response will be sent to the client. This endpoint gets the user information for database storage.*
 
 ## Expected Outcome
 - The user input data should be successfully sent to the backend, or the user will receive an error message if unsuccessful
 
 ## Acceptance Criteria:
-- User's email format correct, if not, user receives an error message
+- User's email format correct, if not, the user receives an error message
 
 ## Requirements
 - A valid email address
