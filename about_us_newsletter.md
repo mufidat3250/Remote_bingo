@@ -1,6 +1,4 @@
-# NewsLetter Page 
-
-## Api Endpoint 
+# NewsLetter Page Api Endpoint 
 [POST] /api/v1/pages/newsletter
 
 ## Description
