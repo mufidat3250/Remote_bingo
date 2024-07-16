@@ -4,6 +4,18 @@ This page shows details about the help center. It contains articles and has a se
 
 ## Acceptance Criteria
 
+- Articles are being sent on page load.
+- Articles can be searched for.
+- Rate limiting is set on search endpoints.
+
+### Requirements
+
+- [] Articles are returned on page load
+- [] Rate limiting is set.
+- [] Article can be searched for.
+
+## Endpoints
+
 ### Get All Topics [GET] `/api/topics
 
 1. Endpoint Flow
