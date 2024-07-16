@@ -1,3 +1,7 @@
+## Description
+
+This page shows details about the help center. It contains articles and has a search functionality to display article.
+
 ## Acceptance Criteria
 
 ### Get All Topics [GET] `/api/topics
@@ -106,66 +110,33 @@ Internal Server Error
 }
 ```
 
-### Newsletter Signup
+## Database Schema
 
-## [TO REMOVE IF IMPLEMENTED ON OTHER PAGES]
+**Table name: articles_table**
 
-1. The endpoint stores emails of users that wants to sign up for newsletter.
+_article_id:_
 
-2. Avoid storing multiple email entries.
+- constraints: string(uuid), unique, primary-key, not null
 
-Request
+_title:_
 
-```
-POST /api/newsletter
-{
-    "email": String
-}
-```
+- constraints: string, unique, not null, length(150)
 
-Successful Response: `201`
+_content:_
 
-```
-{
-    "success": true,
-    "message": String
-}
-```
+- constraints: string, not null, length(4000)
 
-Error Response: `409`
+_createdAt:_
 
-- Throw error when email already exists
+- constraints: datetime
 
-```
-{
-    "success": false,
-    "message": String,
-    "statusCode": 409
-}
-```
+_updatedAt:_
 
-Error Response: `400`
+- constraints: datetime
 
-- Throw error on bad request (email validation)
+### Database diagram
 
-```
-{
-    "success": false,
-    "message": String,
-    "statusCode": 400
-}
-```
-
-Error Response: `500`
-Internal Server Error
-
-```
-{
-    "success": false,
-    "message": String,
-    "statusCode": 500
-}
-```
+![database diagram](db_diagram.png)
 
 ### Testing
 
