@@ -1,4 +1,5 @@
-# Squeeze Page Api Endpoint [POST] /api/v1/pages/squeeze
+# Squeeze Page Api Endpoint 
+**[POST] /api/v1/pages/squeeze**
 
 ## Description
 
@@ -11,7 +12,13 @@
 - User's email format correct, if not, the user receives an error message
 
 ## Requirements
-- A valid email address
+- [ ] A valid email address
+- [ ] An API endpoint with data validation and sanitization
+- [ ] Set up database integration and secure storage
+- [ ] Add rate limiting and CSRF protection measures
+- [ ] Integrate email service for confirmation messages
+- [ ] Conduct security testing and performance optimization
+
 
 **Status code**
 - **201**: Email was successfully stored.
@@ -60,3 +67,14 @@
 
 *createdAt:*
 - constraints: string, date timestamp
+
+## Testing
+
+1. Unit Tests
+
+The systems should have unit tests covering:
+- [ ] rate limiting and CSRF protection measures
+- [ ] the setting up database integration and secured storage
+- [ ] email integration service for confirmation messages
+- [ ] Conduct security testing and performance optimization 
+- [ ] Implement API endpoint with data validation and sanitization
