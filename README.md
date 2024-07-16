@@ -110,7 +110,7 @@ Internal Server Error
 
 ## [TO REMOVE IF IMPLEMENTED ON OTHER PAGES]
 
-1. The endpoint stores emails of users that wants to sign up for newsletter
+1. The endpoint stores emails of users that wants to sign up for newsletter.
 
 2. Avoid storing multiple email entries.
 
