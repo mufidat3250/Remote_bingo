@@ -1,3 +1,7 @@
+## Description
+
+This page shows details about the help center. It contains articles and has a search functionality to display article.
+
 ## Acceptance Criteria
 
 ### Get All Topics [GET] `/api/topics
@@ -105,6 +109,34 @@ Internal Server Error
     "statusCode": 500
 }
 ```
+
+## Database Schema
+
+**Table name: articles_table**
+
+_article_id:_
+
+- constraints: string(uuid), unique, primary-key, not null
+
+_title:_
+
+- constraints: string, unique, not null, length(150)
+
+_content:_
+
+- constraints: string, not null, length(4000)
+
+_createdAt:_
+
+- constraints: datetime
+
+_updatedAt:_
+
+- constraints: datetime
+
+### Database diagram
+
+![database diagram](db_diagram.png)
 
 ### Testing
 
