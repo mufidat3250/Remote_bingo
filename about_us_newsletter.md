@@ -2,16 +2,13 @@
 
 ## Description
 
-- A potential user sends requests with information(email).
-- The user email is validated and sanitized.
-- If the user email fails the validation, an error mesage is sent to them.
-- On successful validation, the email is added to the subscribers_table and a success response is sent to the user.
+*If a user wants to subscribe to our newsletter, the person would input a valid email address into the form and press the button to submit. The email will get validated and sanitized. If the email fails the validation an error message would be returned. If successful, the email will be added to the subscriber_table and a successful response will be sent to the client.*
 
 ## Expected Outcome
 - The user input data should be successfully sent to the backend, or the user will receive an error message if unsuccessful
 
 ## Acceptance Criteria:
-- User's email format correct, if not, user receives an error message
+- User's email format correct, if not, the user receives an error message
 
 ## Requirements
 - A valid email address
@@ -19,7 +16,7 @@
 **Status code**
 - **201**: You have successfully subscribed to our newsletter.
 - **400**: Invalid email address.
-- **401**: Email already exist.
+- **401**: Email address already exist.
 - **500**: A server error occurred.
 
 **Requests:**
