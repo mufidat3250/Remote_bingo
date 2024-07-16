@@ -1,6 +1,6 @@
 ## Description
 
-This page shows details about the help center. It contains articles and has a search functionality to display article.
+This page serves as the central hub for our help center, providing users with access to a wealth of informative articles. With its intuitive search functionality, users can easily find the articles they need to address their questions or concerns. Additionally, the help center page implements rate limiting on its search endpoints.
 
 ## Acceptance Criteria
 
@@ -10,22 +10,22 @@ This page shows details about the help center. It contains articles and has a se
 
 ### Requirements
 
-- [] Articles are returned on page load
-- [] Rate limiting is set.
-- [] Article can be searched for.
+- [ ] Articles are returned on page load.
+- [ ] Articles can be searched for.
+- [ ] Rate limiting is set.
 
 ## Endpoints
 
-### Get All Topics [GET] `/api/topics
+### Get All Topics [GET] `/api/v1/topics`
 
 1. Endpoint Flow
 
-- This endpoint runs by default on page load, and queries the database for all the topics in the `topics` table.
+- This endpoint runs by default on page load, and queries the database for all the topics in the `articles_table` table.
 
 Request
 
 ```
-[GET] /api/topics
+[GET] /api/v1/topics
 ```
 
 Successful Response `200`
@@ -36,9 +36,9 @@ Successful Response `200`
     "message": String,
     "topics": [
         {
+            "article_id": Int,
             "title": String,
             "content": String,
-            "article_id": Int,
         }
         ...
     ]
@@ -59,7 +59,7 @@ Error Response `500`
 
 ### Search for topics
 
-1. Endpoint `/api/topic` will accept query parameters that would be queried across the `topic's title` column.
+1. Endpoint `/api/v1/topics` will accept query parameters that would be queried across the `topic's title` column.
    <br/>
 2. If debouncing is not setup on the frontend, rate limiting error should be thrown.
    <br />
@@ -67,7 +67,7 @@ Error Response `500`
 Request
 
 ```
-[GET] /api/topics?title={title}
+[GET] /api/v1/topics/search?title={title}
 
 query param - title
 ```
@@ -80,9 +80,9 @@ Successful Response: `200`
     "message": String,
     "topics": [
         {
+            "article_id": Int,
             "title": String,
             "content": String,
-            "id": Int,
         },
         ...
     ]
@@ -90,7 +90,7 @@ Successful Response: `200`
 ```
 
 Error Response: `404`
-No article matching the title search param
+No article matching the title search param.
 
 ```
 {
@@ -101,7 +101,7 @@ No article matching the title search param
 ```
 
 Error Response: `429`
-Too many requests, implement Debouncing
+Too many requests, implement debouncing.
 
 ```
 {
@@ -132,11 +132,11 @@ _article_id:_
 
 _title:_
 
-- constraints: string, unique, not null, length(150)
+- constraints: string, unique, not null, text
 
 _content:_
 
-- constraints: string, not null, length(4000)
+- constraints: string, not null, text
 
 _createdAt:_
 
@@ -156,4 +156,4 @@ _updatedAt:_
 
 - The systems should have unit tests covering rate limit check.
 
-- The return data for the `/api/topics` matches the doc.
+- The return data for the `/api/v1/topics` matches the documentation.
