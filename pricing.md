@@ -33,6 +33,7 @@ Develop the backend logic to handle pricing plans retrievals.
 **Success Response**:
   ```
   {
+     success: true,
      statusCode: 200,
      message: "success message",
      plans: [
@@ -49,6 +50,7 @@ Develop the backend logic to handle pricing plans retrievals.
 **No plan Response**:
   ```
   {
+     success: true,
      statusCode: 200,
      message: "success message",
      plans: []
@@ -58,6 +60,7 @@ Develop the backend logic to handle pricing plans retrievals.
 **Failure Response**:
   ```
   {
+     success: false,
      statusCode: 500,
      message: "unable to retrieve plans"
   }
