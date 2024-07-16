@@ -1,4 +1,5 @@
-# NewsLetter Page Api Endpoint [POST] /api/v1/pages/newsletter
+# NewsLetter Page Api Endpoint 
+[POST] /api/v1/pages/newsletter
 
 ## Description
 
@@ -11,12 +12,16 @@
 - User's email format correct, if not, the user receives an error message
 
 ## Requirements
-- A valid email address
+- [ ] Implement API endpoint with data validation and sanitization
+- [ ] Set up database integration and secure storage
+- [ ] Add rate limiting and CSRF protection measures
+- [ ] Integrate email service for confirmation messages
+- [ ] Conduct security testing and performance optimization
 
 **Status code**
 - **201**: You have successfully subscribed to our newsletter.
 - **400**: Invalid email address.
-- **401**: Email address already exist.
+- **401**: Email address already exists.
 - **500**: A server error occurred.
 
 **Requests:**
@@ -60,3 +65,14 @@
 
 *createdAt:*
 - constraints: string, date timestamp
+
+## Testing
+
+1. Unit Tests
+
+The systems should have unit tests covering:
+- [ ] rate limiting and CSRF protection measures
+- [ ] the setting up database integration and secured storage
+- [ ] email integration service for confirmation messages
+- [ ] Conduct security testing and performance optimization 
+- [ ] Implement API endpoint with data validation and sanitization
