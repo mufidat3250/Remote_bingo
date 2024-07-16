@@ -27,7 +27,9 @@ Develop the backend logic to handle pricing plans retrievals.
 ### Retrieve Pricing Plans
 
 **Endpoint**: `/api/pricing/plans`
+
 **Method**: [GET]
+
 **Success Response**:
   ```
   {
